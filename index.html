@@ -39,7 +39,7 @@
             color: var(--text-color);
             font-family: var(--font-body);
             overflow: hidden;
-            /* Prevent scrolling as requested */
+            /* Prevent scrolling */
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -60,38 +60,37 @@
             pointer-events: none;
         }
 
-        /* Layout Structure - TIGHTER */
+        /* Layout Structure - SPACED OUT */
         main {
             z-index: 10;
             width: 100%;
             max-width: 1200px;
-            padding: 0.5rem;
+            padding: 1rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            /* Center content vertically */
             height: 100vh;
-            /* Force full height */
         }
 
-        /* Logo - MASSIVE 900px - PRIORITY */
+        /* Logo - SLIGHTLY ADJUSTED FOR BREATHING ROOM */
         .logo {
-            max-width: 900px;
-            /* BIGGEST PRIORITY */
-            width: 95%;
+            max-width: 800px;
+            /* Reduced from 900px to allow text spacing */
+            width: 90%;
             height: auto;
-            /* Removed max-height to ensure it is not shrunk */
             object-fit: contain;
             filter: drop-shadow(0 0 35px rgba(0, 243, 255, 0.4));
-            margin-bottom: 0rem;
+            margin-bottom: 1rem;
+            /* Added spacing below logo */
         }
 
-        /* Central AI Visual - SUPER COMPACT */
+        /* Central AI Visual - COMPACT */
         .ai-visual-container {
-            width: 110px;
-            /* Smaller to give room to Logo */
-            height: 110px;
-            margin: 0rem 0;
+            width: 120px;
+            height: 120px;
+            margin: 0.5rem 0;
             position: relative;
         }
 
@@ -119,15 +118,17 @@
             }
         }
 
-        /* Headline */
+        /* Headline - MORE LINE HEIGHT */
         .headline {
             font-family: var(--font-heading);
             font-size: 2.2rem;
             font-weight: 800;
-            line-height: 1;
-            letter-spacing: -1px;
+            line-height: 1.4;
+            /* Increased line-height for breathing room */
+            letter-spacing: -0.5px;
             text-transform: uppercase;
-            margin: 0.5rem 0 0 0;
+            margin: 1.5rem 0 0 0;
+            /* More margin top */
         }
 
         .gradient-text {
@@ -138,14 +139,16 @@
             text-fill-color: transparent;
         }
 
-        /* Subheadline */
+        /* Subheadline - SPACED */
         .subheadline {
             font-size: 1rem;
             color: #dddddd;
             font-weight: 300;
-            letter-spacing: 5px;
+            letter-spacing: 6px;
+            /* Wider spacing */
             text-transform: uppercase;
-            margin: 1rem 0 0 0;
+            margin: 1.5rem 0 0 0;
+            /* More margin top */
         }
 
         .highlight {
@@ -153,7 +156,7 @@
             font-weight: 600;
         }
 
-        /* CTA Button - TIGHT SPACING */
+        /* CTA Button - SPACED */
         .cta-button {
             display: inline-flex;
             align-items: center;
@@ -176,8 +179,8 @@
             overflow: hidden;
             background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(5px);
-            margin-top: 2rem;
-            /* Reduced to fit */
+            margin-top: 3rem;
+            /* Increased spacing above button */
         }
 
         .cta-button:hover {
@@ -195,7 +198,7 @@
         /* Footer - ABSOLUTE */
         footer {
             position: absolute;
-            bottom: 10px;
+            bottom: 15px;
             width: 100%;
             font-size: 0.75rem;
             color: #555;
@@ -239,36 +242,31 @@
 
             .logo {
                 max-width: 95%;
-                margin-bottom: 1rem;
+                margin-bottom: 1.5rem;
             }
 
             .headline {
                 font-size: 1.8rem;
+                line-height: 1.4;
             }
 
             .subheadline {
                 font-size: 0.85rem;
-                letter-spacing: 2px;
-                margin: 1rem 0 1.5rem 0;
-            }
-
-            .ai-visual-container {
-                width: 110px;
-                height: 110px;
-                margin: 0.5rem 0;
+                letter-spacing: 3px;
+                margin: 1.5rem 0;
             }
 
             .cta-button {
                 width: 100%;
                 padding: 14px 0;
                 max-width: 300px;
-                margin-top: 1.5rem;
+                margin-top: 2.5rem;
             }
 
             footer {
                 position: relative;
                 bottom: auto;
-                margin-top: 2rem;
+                margin-top: 3rem;
             }
         }
     </style>
@@ -284,7 +282,7 @@
             <img src="assets/Logotipo_transparente.png" alt="Kuatrinova Studio IA Logo" class="logo">
         </header>
 
-        <!-- 2. Central Visual - PEQUEÑO -->
+        <!-- 2. Central Visual -->
         <div class="ai-visual-container fade-in delay-2">
             <svg class="ai-image" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -344,7 +342,7 @@
             Automatiza. Escala. Crece. <span class="highlight">Muy pronto.</span>
         </p>
 
-        <!-- 4. Button - SPACED -->
+        <!-- 4. Button -->
         <a href="mailto:info@kuatrinova.es" class="cta-button fade-in delay-3">
             <span class="cta-icon">✉️</span> info@kuatrinova.es
         </a>
@@ -361,13 +359,13 @@
             if (typeof particlesJS !== 'undefined') {
                 particlesJS("particles-js", {
                     "particles": {
-                        "number": { "value": 150 },
+                        "number": { "value": 80 }, /* Reduced from 150 to reduce saturation */
                         "color": { "value": ["#00f3ff", "#bd00ff", "#ffffff"] },
                         "shape": { "type": "circle" },
-                        "opacity": { "value": 1, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.5 } },
+                        "opacity": { "value": 0.6, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 } }, /* Reduced opacity */
                         "size": { "value": 3, "random": true, "anim": { "enable": false } },
-                        "line_linked": { "enable": true, "distance": 150, "color": "#bd00ff", "opacity": 0.8, "width": 1.5 },
-                        "move": { "enable": true, "speed": 3, "direction": "none", "random": true, "out_mode": "out" }
+                        "line_linked": { "enable": true, "distance": 150, "color": "#bd00ff", "opacity": 0.4, "width": 1 }, /* Reduced line opacity */
+                        "move": { "enable": true, "speed": 2, "direction": "none", "random": true, "out_mode": "out" }
                     },
                     "interactivity": {
                         "detect_on": "window",
