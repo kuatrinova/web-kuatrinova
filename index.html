@@ -74,15 +74,25 @@
             height: 100vh;
         }
 
-        /* Logo - MAXIMUM SPACED */
+        /* Subheadline - NOW TOP ELEMENT */
+        .subheadline {
+            font-size: 1rem;
+            color: #dddddd;
+            font-weight: 300;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin: 0 0 1.5rem 0;
+            /* Margin bottom to separate from logo */
+        }
+
+        /* Logo - NORMAL SPACED */
         .logo {
-            max-width: 800px;
+            max-width: 850px;
             width: 90%;
             height: auto;
             object-fit: contain;
             filter: drop-shadow(0 0 35px rgba(0, 243, 255, 0.4));
-            margin-bottom: 3rem;
-            /* Tripled spacing */
+            margin-bottom: 0.5rem;
         }
 
         /* Central AI Visual - COMPACT */
@@ -117,17 +127,15 @@
             }
         }
 
-        /* Headline - MAXIMUM BREATHING ROOM */
+        /* Headline - COMPACT */
         .headline {
             font-family: var(--font-heading);
             font-size: 2.2rem;
             font-weight: 800;
-            line-height: 1.6;
-            /* Very open line height */
+            line-height: 1.2;
             letter-spacing: -0.5px;
             text-transform: uppercase;
-            margin: 2.5rem 0 0 0;
-            /* Huge top margin */
+            margin: 0.5rem 0 0 0;
         }
 
         .gradient-text {
@@ -138,24 +146,12 @@
             text-fill-color: transparent;
         }
 
-        /* Subheadline - MAXIMUM SPACED */
-        .subheadline {
-            font-size: 1rem;
-            color: #dddddd;
-            font-weight: 300;
-            letter-spacing: 8px;
-            /* Extremely wide spacing */
-            text-transform: uppercase;
-            margin: 2.5rem 0 0 0;
-            /* Huge top margin */
-        }
-
         .highlight {
             color: var(--accent-blue);
             font-weight: 600;
         }
 
-        /* CTA Button - PUSHED FAR DOWN */
+        /* CTA Button - NORMAL SPACED */
         .cta-button {
             display: inline-flex;
             align-items: center;
@@ -178,8 +174,7 @@
             overflow: hidden;
             background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(5px);
-            margin-top: 5rem;
-            /* Massive spacing */
+            margin-top: 3rem;
         }
 
         .cta-button:hover {
@@ -249,12 +244,6 @@
                 line-height: 1.4;
             }
 
-            .subheadline {
-                font-size: 0.85rem;
-                letter-spacing: 3px;
-                margin: 1.5rem 0;
-            }
-
             .cta-button {
                 width: 100%;
                 padding: 14px 0;
@@ -276,6 +265,11 @@
     <div class="particles-container" id="particles-js"></div>
 
     <main>
+        <!-- 0. Subheadline - MOVED TO TOP -->
+        <p class="subheadline fade-in delay-1">
+            Automatiza. Escala. Crece. <span class="highlight">Muy pronto.</span>
+        </p>
+
         <!-- 1. Logo -->
         <header class="fade-in">
             <img src="assets/Logotipo_transparente.png" alt="Kuatrinova Studio IA Logo" class="logo">
@@ -337,9 +331,7 @@
             <span class="gradient-text">Inteligencia Artificial</span>.
         </h1>
 
-        <p class="subheadline fade-in delay-2">
-            Automatiza. Escala. Crece. <span class="highlight">Muy pronto.</span>
-        </p>
+        <!-- Subheadline moved up -->
 
         <!-- 4. Button -->
         <a href="mailto:info@kuatrinova.es" class="cta-button fade-in delay-3">
