@@ -21,3 +21,7 @@ Entradas más recientes arriba.
   - Tildes corregidas en titles y meta descriptions
 - **Search Console verificada** (auto-verificación por proveedor de dominio) y sitemap enviado
 - **Windsor.ai conectado:** GA4 Kuatrinova (536940191) y GSC kuatrinova.es añadidos al hub central de GROWTH_AGENT
+- **Tildes en body de las 7 páginas internas (commits d3f08f8 y 8491aaf):** ~50 correcciones (Automatización, gestión, formación, automáticamente, después, también, qué, cómo, dónde, cuántas, etc.)
+- **Cross-linking temático (commit 8491aaf):** sección "Servicios relacionados" antes del CTA en cada interna con anchor text descriptivo
+- **WebP + dimensions explícitas (commit a27486c):** logos y og-image convertidos a WebP (-37/-41/-78%), `<picture>` con fallback PNG/JPG, `width`/`height` en cada `<img>` para evitar CLS
+- **particles.js self-hosted con defer (commit b2ccee6):** eliminada dependencia de cdn.jsdelivr.net, descargado a `/assets/`, no bloquea LCP
