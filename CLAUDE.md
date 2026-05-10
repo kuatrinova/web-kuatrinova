@@ -20,10 +20,32 @@
 
 # Tests:
 # No hay suite de tests automatizada (sitio estático)
-
-# Deploy:
-# Subida manual / SCP al hosting de Hostinger (ver skill "deploy")
 ```
+
+## Flujo de deploy — kuatrinova.es
+
+⚠️ **NO usar el "Implementar" del panel Git de Hostinger**. Crea un subdirectorio `public_html/public_html/` y rompe el deploy.
+
+**Flujo correcto:**
+```bash
+# 1. Local: hacer cambios y push a GitHub
+git add -A && git commit -m "..." && git push origin main
+
+# 2. Conectar SSH a Hostinger Web Hosting:
+ssh -p 65002 u846574029@77.37.52.87
+# (la contraseña la cambia Carlos cada cierto tiempo, preguntar antes)
+
+# 3. Deploy via git reset (forzar sincronización con remoto):
+cd ~/domains/kuatrinova.es/public_html
+export GIT_PAGER=cat
+git fetch origin main
+git reset --hard origin/main
+
+# 4. Verificar:
+grep -c "GTM-TMTDNCJ3" index.html  # debería ser 2
+```
+
+**Archivos NO trackeados en git que el hosting tiene en el raíz** (no tocar): `firmas/`, `instagram/`, `default.php`, `relay.php`, `assets/851.jpg`, `assets/Logotipo_*.png`, `assets/bg-ai.png`. `git reset --hard` no los borra (están en `.gitignore` o son untracked).
 
 ## Reglas de trabajo — OBLIGATORIAS
 
