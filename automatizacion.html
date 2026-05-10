@@ -131,6 +131,14 @@
 
         /* Responsive */
         @media(max-width:768px){.nav{padding:1rem 1.25rem;}.service-hero{padding:4rem 1.5rem 3rem;}.sect{padding:60px 1.5rem;}.stat-num{font-size:2rem;}.btn-cta{width:100%;justify-content:center;max-width:320px;}}
+        .related-sect{background:linear-gradient(180deg,#06060f,#080818,#06060f);border-top:1px solid rgba(189,0,255,.1);}
+        .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:2.5rem;}
+        .related-card{display:block;background:linear-gradient(160deg,rgba(189,0,255,.04),rgba(0,0,0,.3));border:1px solid rgba(189,0,255,.15);border-radius:20px;padding:1.75rem;text-decoration:none;color:inherit;transition:all .35s;}
+        .related-card:hover{border-color:rgba(189,0,255,.4);transform:translateY(-4px);box-shadow:0 20px 50px rgba(189,0,255,.08);}
+        .related-card:hover .rel-arrow{transform:translateX(6px);}
+        .rel-title{font-family:var(--heading);font-size:1.15rem;font-weight:800;text-transform:uppercase;letter-spacing:-.5px;margin-bottom:.7rem;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:.5rem;}
+        .rel-arrow{color:var(--purple);transition:transform .3s;}
+        .rel-desc{color:#aaa;font-size:.95rem;line-height:1.5;}
     </style>
 </head>
 <body>
@@ -190,7 +198,7 @@
             <div class="stats-row reveal">
                 <div class="stat"><div class="stat-num">240%</div><div class="stat-txt">ROI medio primer ano</div></div>
                 <div class="stat"><div class="stat-num">70%</div><div class="stat-txt">Menos errores manuales</div></div>
-                <div class="stat"><div class="stat-num">6-9</div><div class="stat-txt">Meses para recuperar inversion</div></div>
+                <div class="stat"><div class="stat-num">6-9</div><div class="stat-txt">Meses para recuperar inversión</div></div>
                 <div class="stat"><div class="stat-num">50%</div><div class="stat-txt">Reducción costes operativos</div></div>
             </div>
         </div>
@@ -201,7 +209,7 @@
         <div class="sect">
             <p class="sect-label reveal">Stack tecnologico</p>
             <h2 class="sect-title reveal">Herramientas que <span class="gradient">usamos</span></h2>
-            <p class="sect-sub reveal">Trabajamos con las plataformas mas robustas del mercado. Sin atarte a ninguna.</p>
+            <p class="sect-sub reveal">Trabajamos con las plataformas más robustas del mercado. Sin atarte a ninguna.</p>
             <div class="tools-row reveal">
                 <span class="tool">n8n</span><span class="tool">Make</span><span class="tool">Airtable</span><span class="tool">Google Sheets</span><span class="tool">HubSpot</span><span class="tool">Notion</span><span class="tool">Gmail</span><span class="tool">Slack</span><span class="tool">Stripe</span><span class="tool">WooCommerce</span><span class="tool">Supabase</span><span class="tool">REST APIs</span>
             </div>
@@ -223,6 +231,27 @@
     </div>
 
     <!-- CTA -->
+    <div class="related-sect">
+        <div class="sect">
+            <p class="sect-label reveal">Continúa explorando</p>
+            <h2 class="sect-title reveal">Servicios <span class="gradient">relacionados</span></h2>
+            <div class="related-grid reveal">
+                <a href="integraciones.html" class="related-card">
+                    <h3 class="rel-title">Integraciones de sistemas<span class="rel-arrow">→</span></h3>
+                    <p class="rel-desc">Sin integraciones no hay automatización fluida. Conectamos tu CRM, ERP y herramientas para que los datos viajen solos.</p>
+                </a>
+                <a href="chatbots.html" class="related-card">
+                    <h3 class="rel-title">Chatbots con IA<span class="rel-arrow">→</span></h3>
+                    <p class="rel-desc">Automatiza también la atención al cliente. Chatbots con GPT-4 que cualifican leads y atienden 24/7.</p>
+                </a>
+                <a href="dashboards.html" class="related-card">
+                    <h3 class="rel-title">Dashboards e informes<span class="rel-arrow">→</span></h3>
+                    <p class="rel-desc">Visualiza el impacto de tus automatizaciones con paneles en tiempo real y KPIs clave para tu negocio.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <div class="cta-sect">
         <h2 class="sect-title">¿Listo para <span class="gradient">automatizar</span>?</h2>
         <p class="sect-sub">Te analizamos gratis los procesos de tu empresa y te decimos exactamente cuánto tiempo puedes ahorrar.</p>
