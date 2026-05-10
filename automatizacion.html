@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TMTDNCJ3');</script>
+    <!-- End Google Tag Manager -->
+    <title>Automatizacion de Procesos | Kuatrinova Studio IA</title>
+    <meta name="description" content="Automatiza las tareas repetitivas de tu empresa con n8n y Make. Facturacion, onboarding, gestion de pedidos y mas. Sin codigo, sin fricciones.">
+    <link rel="canonical" href="https://kuatrinova.es/automatizacion.html">
+    <meta property="og:title" content="Automatizacion de Procesos | Kuatrinova">
+    <meta property="og:description" content="Eliminamos las tareas manuales que consumen horas cada semana con n8n y Make.">
+    <meta property="og:image" content="https://kuatrinova.es/assets/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg:#000; --text:#fff; --blue:#00f3ff; --purple:#bd00ff; --heading:'Montserrat',sans-serif; --body:'Inter',sans-serif; }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:var(--bg);color:var(--text);font-family:var(--body);}
+
+        /* Nav */
+        .nav{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2rem;border-bottom:1px solid rgba(255,255,255,0.06);}
+        .nav-logo{height:80px;image-rendering:-webkit-optimize-contrast;}
+        .nav-back{font-size:.8rem;color:#888;text-decoration:none;letter-spacing:2px;text-transform:uppercase;transition:color .3s;}
+        .nav-back:hover{color:var(--blue);}
+
+        /* Hero */
+        .service-hero{text-align:center;padding:6rem 2rem 5rem;background:radial-gradient(ellipse at center,#060620 0%,#000 70%);position:relative;}
+        .service-hero::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);opacity:.3;}
+        .hero-icon{font-size:4rem;margin-bottom:1.5rem;filter:drop-shadow(0 0 20px rgba(0,243,255,.5));}
+        .hero-title{font-family:var(--heading);font-size:clamp(2rem,5vw,3.2rem);font-weight:900;text-transform:uppercase;letter-spacing:-1px;line-height:1.1;margin-bottom:1rem;}
+        .hero-sub{color:#aaa;font-size:1.1rem;line-height:1.7;max-width:620px;margin:0 auto;}
+        .gradient{background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+        /* Section shared */
+        .sect{max-width:1100px;margin:0 auto;padding:80px 2rem;}
+        .sect-label{display:inline-block;font-size:.7rem;letter-spacing:5px;text-transform:uppercase;color:var(--blue);background:rgba(0,243,255,.08);border:1px solid rgba(0,243,255,.2);border-radius:50px;padding:4px 16px;margin-bottom:1.5rem;}
+        .sect-title{font-family:var(--heading);font-size:2rem;font-weight:900;text-transform:uppercase;letter-spacing:-1px;margin-bottom:1rem;}
+        .sect-sub{color:#aaa;font-size:1rem;line-height:1.7;max-width:560px;margin-bottom:2.5rem;}
+
+        /* Wrapper bg */
+        .wrap-dark{background:linear-gradient(180deg,#06060f,#080818,#06060f);position:relative;}
+        .wrap-darker{background:linear-gradient(180deg,#020208,#060614,#020208);position:relative;}
+        .wrap-dark::before,.wrap-darker::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,243,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,243,255,.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+
+        /* Use case cards */
+        .cases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;}
+        .case-card{background:linear-gradient(160deg,rgba(0,243,255,.04),rgba(0,0,0,.3));border:1px solid rgba(0,243,255,.12);border-radius:20px;padding:2rem;transition:all .35s;position:relative;overflow:hidden;}
+        .case-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--purple),var(--blue));background-size:200% 100%;opacity:0;transition:opacity .35s;animation:shimmer 3s linear infinite;}
+        @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+        .case-card:hover{border-color:rgba(0,243,255,.4);transform:translateY(-6px);box-shadow:0 25px 60px rgba(0,243,255,.1);}
+        .case-card:hover::before{opacity:1;}
+        .case-icon{font-size:2rem;margin-bottom:1rem;filter:drop-shadow(0 0 10px rgba(0,243,255,.5));}
+        .case-title{font-family:var(--heading);font-size:.9rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem;color:#fff;}
+        .case-desc{color:#999;font-size:.85rem;line-height:1.65;}
+
+        /* Stats */
+        .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:2.5rem;}
+        .stat{text-align:center;padding:1.5rem;background:rgba(255,255,255,.02);border:1px solid rgba(0,243,255,.1);border-radius:16px;}
+        .stat-num{font-family:var(--heading);font-size:2.5rem;font-weight:900;background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:.5rem;}
+        .stat-txt{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:#666;}
+
+        /* Tools */
+        .tools-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
+        .tool{padding:6px 18px;border:1px solid rgba(255,255,255,.1);border-radius:50px;font-size:.75rem;font-weight:600;letter-spacing:1px;color:#777;background:rgba(255,255,255,.02);transition:all .3s;}
+        .tool:hover{border-color:rgba(0,243,255,.3);color:var(--blue);}
+
+        /* Target */
+        .target-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1.5rem;}
+        .target-list li{padding:1rem 1.25rem;background:rgba(255,255,255,.02);border:1px solid rgba(189,0,255,.12);border-radius:14px;font-size:.9rem;color:#bbb;display:flex;align-items:center;gap:.75rem;}
+        .target-list li span{color:var(--purple);font-size:1.2rem;}
+
+        /* CTA */
+        .cta-sect{text-align:center;padding:100px 2rem;background:radial-gradient(ellipse at center,#080820,#000 70%);}
+        .cta-sect .sect-title{font-size:2.5rem;margin-bottom:1rem;}
+        .cta-sect .sect-sub{margin:0 auto 2.5rem;max-width:500px;}
+        .btn-cta{display:inline-flex;align-items:center;gap:10px;padding:18px 44px;font-family:var(--heading);font-size:.95rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:#000;background:var(--blue);border-radius:50px;transition:all .3s;box-shadow:0 0 50px rgba(0,243,255,.4);}
+        .btn-cta:hover{background:#fff;box-shadow:0 0 70px rgba(0,243,255,.6);transform:translateY(-3px);}
+
+        /* Footer */
+        footer{background:#000;border-top:1px solid rgba(255,255,255,.05);text-align:center;padding:2rem;font-size:.7rem;color:#333;letter-spacing:2px;text-transform:uppercase;}
+
+        /* WhatsApp */
+        .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:999;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;font-size:1.8rem;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:all .3s;animation:waf 3s infinite ease-in-out;}
+        .wa-float:hover{transform:scale(1.1);}
+        @keyframes waf{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+        /* Reveal */
+        .reveal{opacity:0;transform:translateY(40px);transition:opacity .7s,transform .7s;}.reveal.visible{opacity:1;transform:translateY(0);}
+
+        /* Responsive */
+        @media(max-width:768px){.nav{padding:1rem 1.25rem;}.service-hero{padding:4rem 1.5rem 3rem;}.sect{padding:60px 1.5rem;}.stat-num{font-size:2rem;}.btn-cta{width:100%;justify-content:center;max-width:320px;}}
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMTDNCJ3"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="nav">
+        <a href="index.html"><img src="assets/LOGO_KUATRINOVA_SENCILLO.png" alt="Kuatrinova" class="nav-logo"></a>
+        <a href="index.html" class="nav-back">← Volver</a>
+    </nav>
+
+    <div class="service-hero">
+        <div class="hero-icon">⚙️</div>
+        <h1 class="hero-title">Automatizacion de <span class="gradient">Procesos</span></h1>
+        <p class="hero-sub">Conectamos n8n y Make para eliminar las tareas manuales que consumen horas cada semana. Sin necesidad de programadores.</p>
+    </div>
+
+    <!-- Casos de uso -->
+    <div class="wrap-dark">
+        <div class="sect">
+            <p class="sect-label reveal">Casos reales</p>
+            <h2 class="sect-title reveal">Lo que <span class="gradient">automatizamos</span></h2>
+            <p class="sect-sub reveal">Cada empresa es diferente, pero estos son los procesos que mas tiempo ahorran a nuestros clientes.</p>
+            <div class="cases-grid reveal">
+                <div class="case-card">
+                    <div class="case-icon">🧾</div>
+                    <p class="case-title">Facturacion automatica</p>
+                    <p class="case-desc">Cuando se cierra una venta en el CRM, se genera la factura en el ERP y se envia al cliente automaticamente. Cero intervencion manual.</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">👋</div>
+                    <p class="case-title">Onboarding de clientes</p>
+                    <p class="case-desc">Formulario recibido → carpeta creada, email de bienvenida enviado, tarea asignada al equipo. Todo en segundos, sin errores.</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">📦</div>
+                    <p class="case-title">Gestion de pedidos</p>
+                    <p class="case-desc">Pedido confirmado en la tienda → actualiza stock, notifica a almacen, envia tracking al cliente. Flujo completo sin tocar nada.</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">📋</div>
+                    <p class="case-title">Informes automaticos</p>
+                    <p class="case-desc">Agrupacion diaria de datos de ventas, formularios y soporte en un solo informe enviado por email cada manana a las 8h.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultados -->
+    <div class="wrap-darker">
+        <div class="sect">
+            <p class="sect-label reveal">Datos reales</p>
+            <h2 class="sect-title reveal">El impacto de <span class="gradient">automatizar</span></h2>
+            <p class="sect-sub reveal">Datos basados en estudios de Forrester, IBM y el sector de automatizacion empresarial.</p>
+            <div class="stats-row reveal">
+                <div class="stat"><div class="stat-num">240%</div><div class="stat-txt">ROI medio primer ano</div></div>
+                <div class="stat"><div class="stat-num">70%</div><div class="stat-txt">Menos errores manuales</div></div>
+                <div class="stat"><div class="stat-num">6-9</div><div class="stat-txt">Meses para recuperar inversion</div></div>
+                <div class="stat"><div class="stat-num">50%</div><div class="stat-txt">Reduccion costes operativos</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Herramientas -->
+    <div class="wrap-dark">
+        <div class="sect">
+            <p class="sect-label reveal">Stack tecnologico</p>
+            <h2 class="sect-title reveal">Herramientas que <span class="gradient">usamos</span></h2>
+            <p class="sect-sub reveal">Trabajamos con las plataformas mas robustas del mercado. Sin atarte a ninguna.</p>
+            <div class="tools-row reveal">
+                <span class="tool">n8n</span><span class="tool">Make</span><span class="tool">Airtable</span><span class="tool">Google Sheets</span><span class="tool">HubSpot</span><span class="tool">Notion</span><span class="tool">Gmail</span><span class="tool">Slack</span><span class="tool">Stripe</span><span class="tool">WooCommerce</span><span class="tool">Supabase</span><span class="tool">REST APIs</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Para quien -->
+    <div class="wrap-darker">
+        <div class="sect">
+            <p class="sect-label reveal">Para quien es</p>
+            <h2 class="sect-title reveal">Esto es para ti <span class="gradient">si...</span></h2>
+            <ul class="target-list reveal">
+                <li><span>→</span> Tienes un equipo de 5 a 100 personas haciendo tareas repetitivas</li>
+                <li><span>→</span> Tu equipo copia datos entre aplicaciones manualmente</li>
+                <li><span>→</span> Pierdes tiempo cada semana en procesos que podrian ir solos</li>
+                <li><span>→</span> Eres una agencia, consultora, e-commerce o empresa de servicios</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-sect">
+        <h2 class="sect-title">¿Listo para <span class="gradient">automatizar</span>?</h2>
+        <p class="sect-sub">Te analizamos gratis los procesos de tu empresa y te decimos exactamente cuanto tiempo puedes ahorrar.</p>
+        <a href="https://wa.me/34689025315?text=Hola%2C%20me%20interesa%20automatizar%20procesos%20en%20mi%20empresa" class="btn-cta" target="_blank" rel="noopener">💬 Pedir auditoria gratuita</a>
+    </div>
+
+    <footer><p>&copy; 2026 Kuatrinova Studio IA &middot; info@kuatrinova.es</p></footer>
+    <a href="https://wa.me/34689025315?text=Hola%2C%20me%20interesa%20la%20auditoría%20de%20IA%20gratuita" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            var o=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('visible');});},{threshold:.15});
+            document.querySelectorAll('.reveal').forEach(function(el){o.observe(el);});
+        });
+    </script>
+</body>
+</html>

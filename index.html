@@ -4,365 +4,942 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuatrinova Studio IA | Libera tu tiempo con Automatización e IA</title>
-    <meta name="description"
-        content="Expertos en automatización y soluciones de IA a medida. Ayudamos a empresas a eliminar tareas repetitivas y escalar sus resultados.">
-    <!-- Google Fonts -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TMTDNCJ3');</script>
+    <!-- End Google Tag Manager -->
+    <title>Kuatrinova | Automatización e IA para Empresas</title>
+    <meta name="description" content="Kuatrinova Studio IA automatiza los procesos de tu empresa con n8n, Make e Inteligencia Artificial. Elimina tareas repetitivas, conecta tus herramientas y escala tu negocio. Auditoría gratuita de 30 minutos.">
+    <link rel="canonical" href="https://kuatrinova.es/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kuatrinova | Automatización e IA para Empresas">
+    <meta property="og:description" content="Eliminamos las tareas repetitivas de tu empresa con automatización e IA. Auditoría gratuita de 30 minutos.">
+    <meta property="og:image" content="https://kuatrinova.es/assets/og-image.jpg">
+    <meta property="og:url" content="https://kuatrinova.es">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kuatrinova | Automatización e IA para Empresas">
+    <meta name="twitter:description" content="Eliminamos las tareas repetitivas de tu empresa con automatización e IA.">
+    <meta name="twitter:image" content="https://kuatrinova.es/assets/og-image.jpg">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Kuatrinova Studio IA",
+      "url": "https://kuatrinova.es",
+      "email": "info@kuatrinova.es",
+      "telephone": "+34689025315",
+      "description": "Automatización de procesos e Inteligencia Artificial a medida para empresas. Eliminamos tareas repetitivas con n8n, Make y chatbots IA.",
+      "areaServed": "ES",
+      "knowsAbout": ["Automatización de procesos", "Inteligencia Artificial", "n8n", "Make", "Chatbots IA", "Integraciones de sistemas"],
+      "offers": {
+        "@type": "Offer",
+        "name": "Auditoría de IA Gratuita",
+        "price": "0",
+        "priceCurrency": "EUR"
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
 
     <style>
-        /* CSS INCRUSTADO PARA EVITAR ERRORES DE CARGA LOCAL */
         :root {
             --bg-color: #000000;
             --text-color: #ffffff;
             --accent-blue: #00f3ff;
             --accent-purple: #bd00ff;
-            --accent-magenta: #ff0055;
             --font-heading: 'Montserrat', sans-serif;
             --font-body: 'Inter', sans-serif;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background-color: var(--bg-color);
-            background: radial-gradient(circle at center, #0a1030 0%, #000000 80%);
-
             color: var(--text-color);
             font-family: var(--font-body);
-            overflow: hidden;
-            /* Prevent scrolling */
-            height: 100vh;
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            background: radial-gradient(circle at center, #060620 0%, #000000 75%);
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             position: relative;
+            padding: 3rem 2rem 7rem;
         }
 
-        /* Particles Background */
         .particles-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0; pointer-events: none;
         }
 
-        /* Layout Structure - SPACED OUT */
-        main {
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 80%; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
+            opacity: 0.4;
+        }
+
+        .hero-content {
             z-index: 10;
             width: 100%;
-            max-width: 1200px;
-            padding: 1rem;
+            max-width: 1100px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            /* Center content vertically */
-            height: 100vh;
         }
 
-        /* Subheadline - NOW TOP ELEMENT */
-        .subheadline {
-            font-size: 1rem;
-            color: #dddddd;
-            font-weight: 300;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin: 0 0 1.5rem 0;
-            /* Margin bottom to separate from logo */
-        }
-
-        /* Logo - MAXIMUM SHARPNESS NO GLOW */
+        /* Logo grande con glow */
         .logo {
-            max-width: 800px;
             width: 100%;
+            max-width: 720px;
             height: auto;
             object-fit: contain;
-            /* Force pixel perfection */
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
-            filter: none;
-            /* Removed glow that causes blur */
-            margin-bottom: 0.5rem;
+            filter: drop-shadow(0 0 40px rgba(0,243,255,0.25));
+            margin-bottom: 2.5rem;
         }
 
-        /* Central AI Visual - COMPACT */
-        .ai-visual-container {
-            width: 120px;
-            height: 120px;
-            margin: 0.5rem 0;
-            position: relative;
-        }
-
-        .ai-image {
-            width: 100%;
-            height: 100%;
-            filter: drop-shadow(0 0 20px var(--accent-blue));
-            animation: pulse 4s infinite ease-in-out;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                filter: drop-shadow(0 0 20px var(--accent-blue));
-            }
-
-            50% {
-                transform: scale(1.05);
-                filter: drop-shadow(0 0 35px var(--accent-purple));
-            }
-
-            100% {
-                transform: scale(1);
-                filter: drop-shadow(0 0 20px var(--accent-blue));
-            }
-        }
-
-        /* Headline - COMPACT */
         .headline {
             font-family: var(--font-heading);
-            font-size: 2.2rem;
-            font-weight: 800;
-            line-height: 1.2;
-            letter-spacing: -0.5px;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
             text-transform: uppercase;
-            margin: 0.5rem 0 0 0;
+            margin-bottom: 1.25rem;
         }
 
         .gradient-text {
             background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-fill-color: transparent;
         }
 
-        .highlight {
-            color: var(--accent-blue);
-            font-weight: 600;
+        .hero-sub {
+            font-size: 1.1rem;
+            color: #aaa;
+            line-height: 1.7;
+            max-width: 600px;
+            margin-bottom: 3rem;
         }
 
-        /* CTA Button - NORMAL SPACED */
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
-            padding: 12px 35px;
-            font-family: var(--font-heading);
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #ffffff;
-            background: transparent;
-            text-decoration: none;
-            border: 1px solid var(--accent-blue);
-            border-radius: 50px;
+            margin-bottom: 3.5rem;
+        }
+
+        .btn-hero-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 18px 44px;
+            font-family: var(--font-heading); font-size: 0.95rem;
+            font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+            text-decoration: none; color: #000;
+            background: var(--accent-blue);
+            border-radius: 50px; border: none;
             transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+            box-shadow: 0 0 50px rgba(0,243,255,0.45), 0 0 100px rgba(0,243,255,0.15);
+        }
+
+        .btn-hero-primary:hover {
+            background: #fff;
+            box-shadow: 0 0 70px rgba(0,243,255,0.65);
+            transform: translateY(-3px);
+        }
+
+        .btn-hero-secondary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 18px 44px;
+            font-family: var(--font-heading); font-size: 0.95rem;
+            font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+            text-decoration: none; color: #ccc;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-hero-secondary:hover {
+            border-color: rgba(0,243,255,0.4);
+            color: var(--accent-blue);
+            background: rgba(0,243,255,0.06);
+            transform: translateY(-3px);
+        }
+
+        /* Fila de tecnologías */
+        .tech-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tech-label {
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #444;
+            margin-right: 0.5rem;
+        }
+
+        .tech-badge {
+            padding: 5px 16px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 50px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #666;
+            background: rgba(255,255,255,0.02);
+            transition: all 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            border-color: rgba(0,243,255,0.3);
+            color: var(--accent-blue);
+        }
+
+        /* ─── SCROLL INDICATOR ─── */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .scroll-indicator span {
+            font-size: 0.65rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .scroll-arrow {
+            width: 28px;
+            height: 28px;
+            border-right: 2px solid var(--accent-blue);
+            border-bottom: 2px solid var(--accent-blue);
+            transform: rotate(45deg);
+            animation: bounce 1.8s infinite ease-in-out;
+            box-shadow: 3px 3px 8px rgba(0,243,255,0.4);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: rotate(45deg) translateY(0); opacity: 1; }
+            50%       { transform: rotate(45deg) translateY(8px); opacity: 0.5; }
+        }
+
+        /* ─── DIVIDER ─── */
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
+            opacity: 0.3;
+        }
+
+        /* ─── SECTIONS SHARED ─── */
+        .section-wrapper { width: 100%; position: relative; }
+
+        .section-wrapper.dark {
+            background: linear-gradient(180deg, #06060f 0%, #080818 50%, #06060f 100%);
+        }
+
+        .section-wrapper.darker {
+            background: linear-gradient(180deg, #020208 0%, #060614 50%, #020208 100%);
+        }
+
+        /* Grid pattern + glow */
+        .section-wrapper.dark::before,
+        .section-wrapper.darker::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,243,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,243,255,0.025) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        .section-wrapper.dark::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 500px; height: 300px;
+            background: radial-gradient(ellipse, rgba(0,243,255,0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .section-wrapper.darker::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 500px; height: 300px;
+            background: radial-gradient(ellipse, rgba(189,0,255,0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        section {
+            padding: 100px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
             position: relative;
-            overflow: hidden;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(5px);
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--accent-blue);
+            background: rgba(0,243,255,0.08);
+            border: 1px solid rgba(0,243,255,0.2);
+            border-radius: 50px;
+            padding: 4px 16px;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem; font-weight: 900;
+            text-transform: uppercase; line-height: 1.1;
+            margin-bottom: 1.25rem; letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            color: #aaa;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 560px;
+        }
+
+        /* ─── SERVICIOS ─── */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
             margin-top: 3rem;
         }
 
-        .cta-button:hover {
-            background: var(--accent-blue);
-            color: #000;
-            box-shadow: 0 0 40px rgba(0, 243, 255, 0.5);
-            transform: translateY(-2px);
-            border-color: transparent;
+        .service-card {
+            background: linear-gradient(160deg, rgba(0,243,255,0.04) 0%, rgba(0,0,0,0.3) 100%);
+            border: 1px solid rgba(0,243,255,0.12);
+            border-radius: 20px;
+            padding: 2rem 1.75rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        .cta-icon {
-            font-size: 1.1rem;
-        }
-
-        /* Footer - ABSOLUTE */
-        footer {
+        .service-card::before {
+            content: '';
             position: absolute;
-            bottom: 15px;
-            width: 100%;
-            font-size: 0.75rem;
-            color: #555;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding-bottom: 0;
-        }
-
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 1.5s ease forwards;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple), var(--accent-blue));
+            background-size: 200% 100%;
             opacity: 0;
+            transition: opacity 0.4s ease;
+            animation: shimmer 3s linear infinite;
         }
 
-        .delay-1 {
-            animation-delay: 0.2s;
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
         }
 
-        .delay-2 {
-            animation-delay: 0.4s;
+        .service-card:hover {
+            border-color: rgba(0,243,255,0.4);
+            background: linear-gradient(160deg, rgba(0,243,255,0.08) 0%, rgba(0,0,0,0.4) 100%);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0,243,255,0.1), 0 0 0 1px rgba(0,243,255,0.2), inset 0 1px 0 rgba(0,243,255,0.1);
         }
 
-        .delay-3 {
-            animation-delay: 0.6s;
+        .service-card:hover::before { opacity: 1; }
+
+        .service-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1.25rem;
+            display: block;
+            filter: drop-shadow(0 0 12px rgba(0,243,255,0.5));
         }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
+        .service-title {
+            font-family: var(--font-heading);
+            font-size: 0.9rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 1.5px;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
         }
 
-        /* Responsive */
+        .service-desc { color: #999; font-size: 0.875rem; line-height: 1.65; }
+        a.service-card { text-decoration: none; color: inherit; display: block; }
+        .card-link { display: inline-block; margin-top: 1rem; font-family: var(--font-heading); font-size: .72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-blue); opacity: 0; transition: opacity .35s ease; }
+        .service-card:hover .card-link { opacity: 1; }
+
+        /* ─── CÓMO FUNCIONA ─── */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            background: linear-gradient(160deg, rgba(189,0,255,0.04) 0%, rgba(0,0,0,0.3) 100%);
+            border: 1px solid rgba(189,0,255,0.15);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue), var(--accent-purple));
+            background-size: 200% 100%;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            animation: shimmer 3s linear infinite;
+        }
+
+        .step:hover {
+            border-color: rgba(189,0,255,0.45);
+            background: linear-gradient(160deg, rgba(189,0,255,0.08) 0%, rgba(0,0,0,0.4) 100%);
+            transform: translateY(-6px);
+            box-shadow: 0 25px 60px rgba(189,0,255,0.1), inset 0 1px 0 rgba(189,0,255,0.1);
+        }
+
+        .step:hover::before { opacity: 1; }
+
+        .step-number {
+            width: 72px; height: 72px;
+            border-radius: 50%;
+            background: rgba(189,0,255,0.1);
+            border: 2px solid rgba(189,0,255,0.5);
+            display: flex; align-items: center; justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 1.6rem; font-weight: 900;
+            color: var(--accent-purple);
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 0 30px rgba(189,0,255,0.25), inset 0 0 20px rgba(189,0,255,0.05);
+        }
+
+        .step-title {
+            font-family: var(--font-heading);
+            font-size: 1rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 0.75rem; color: #fff;
+        }
+
+        .step-desc { color: #999; font-size: 0.875rem; line-height: 1.65; }
+        a.step { text-decoration: none; color: inherit; display: block; }
+        .step:hover .card-link { opacity: 1; }
+
+        /* ─── POR QUÉ KUATRINOVA ─── */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem;
+            margin-top: 3rem;
+        }
+
+        .benefit {
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .benefit:hover {
+            border-color: rgba(0,243,255,0.2);
+            background: rgba(0,243,255,0.03);
+        }
+
+        .benefit-icon-wrap {
+            flex-shrink: 0;
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(0,243,255,0.12), rgba(189,0,255,0.08));
+            border: 1px solid rgba(0,243,255,0.2);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .benefit-title {
+            font-family: var(--font-heading);
+            font-size: 0.85rem; font-weight: 800;
+            text-transform: uppercase; letter-spacing: 0.5px;
+            margin-bottom: 0.4rem; color: #fff;
+        }
+
+        .benefit-desc { color: #999; font-size: 0.85rem; line-height: 1.6; }
+
+        /* ─── CTA FINAL ─── */
+        .cta-section {
+            text-align: center;
+            padding: 120px 2rem;
+            background: radial-gradient(ellipse at center, #080820 0%, #000000 70%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(0,243,255,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-section .section-title { font-size: 2.8rem; position: relative; }
+        .cta-section .section-subtitle { margin: 0 auto 3rem; position: relative; }
+
+        .cta-buttons {
+            display: flex; gap: 1rem;
+            justify-content: center; flex-wrap: wrap;
+            position: relative;
+        }
+
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 40px;
+            font-family: var(--font-heading); font-size: 0.9rem;
+            font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+            text-decoration: none; color: #000;
+            background: var(--accent-blue);
+            border-radius: 50px; border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 40px rgba(0,243,255,0.4), 0 0 80px rgba(0,243,255,0.15);
+        }
+
+        .btn-primary:hover {
+            background: #ffffff;
+            box-shadow: 0 0 60px rgba(0,243,255,0.6);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 40px;
+            font-family: var(--font-heading); font-size: 0.9rem;
+            font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+            text-decoration: none; color: #ffffff;
+            background: transparent;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            border-color: rgba(255,255,255,0.6);
+            background: rgba(255,255,255,0.05);
+            transform: translateY(-3px);
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: #000;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            text-align: center; padding: 2rem;
+            font-size: 0.7rem; color: #333;
+            letter-spacing: 2px; text-transform: uppercase;
+        }
+
+        /* ─── STATS ROW ─── */
+        .stats-bar {
+            width: 100%;
+            background: linear-gradient(180deg, #06060f 0%, #0a0a1a 100%);
+            border-top: 1px solid rgba(0,243,255,0.1);
+            border-bottom: 1px solid rgba(0,243,255,0.1);
+            padding: 3rem 2rem;
+        }
+
+        .stats-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 0.5rem;
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #666;
+        }
+
+        /* ─── WHATSAPP FLOAT ─── */
+        .wa-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            background: #25d366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+            transition: all 0.3s ease;
+            animation: waFloat 3s infinite ease-in-out;
+        }
+
+        .wa-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37,211,102,0.7);
+        }
+
+        @keyframes waFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* ─── ANIMATIONS ─── */
+        .fade-in { animation: fadeIn 1.5s ease forwards; opacity: 0; }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        @keyframes fadeIn { to { opacity: 1; } }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── RESPONSIVE ─── */
         @media (max-width: 768px) {
-            body {
-                overflow-y: auto;
-                height: auto;
-                min-height: 100vh;
-                padding: 2rem 0;
-            }
-
-            .logo {
-                max-width: 95%;
-                margin-bottom: 1.5rem;
-            }
-
-            .headline {
-                font-size: 1.8rem;
-                line-height: 1.4;
-            }
-
-            .cta-button {
-                width: 100%;
-                padding: 14px 0;
-                max-width: 300px;
-                margin-top: 2.5rem;
-            }
-
-            footer {
-                position: relative;
-                bottom: auto;
-                margin-top: 3rem;
-            }
+            .hero { padding: 3rem 1.5rem 6rem; }
+            .logo { max-width: 90%; }
+            .headline { letter-spacing: -0.5px; }
+            .hero-sub { font-size: 1rem; }
+            .btn-hero-primary, .btn-hero-secondary { width: 100%; justify-content: center; max-width: 320px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            .stat-number { font-size: 2rem; }
+            section { padding: 70px 1.5rem; }
+            .section-title { font-size: 1.8rem; letter-spacing: -0.5px; }
+            .cta-section .section-title { font-size: 2rem; }
+            .btn-primary, .btn-secondary { width: 100%; justify-content: center; max-width: 300px; }
+            .wa-float { width: 52px; height: 52px; font-size: 1.5rem; bottom: 1.25rem; right: 1.25rem; }
         }
     </style>
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMTDNCJ3"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-    <div class="particles-container" id="particles-js"></div>
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <div class="hero">
+        <div class="particles-container" id="particles-js"></div>
 
-    <main>
-        <!-- 0. Subheadline - MOVED TO TOP -->
-        <p class="subheadline fade-in delay-1">
-            Creamos soluciones a medida que eliminan tareas repetitivas y <span class="highlight">escalan tu
-                negocio.</span>
-        </p>
+        <div class="hero-content">
 
-        <!-- 1. Logo -->
-        <header class="fade-in">
-            <img src="assets/LOGO_KUATRINOVA_SENCILLO.png" alt="Kuatrinova Studio IA Logo" class="logo">
-        </header>
+            <img src="assets/LOGO_KUATRINOVA_SENCILLO.png" alt="Kuatrinova Studio IA Logo" class="logo fade-in">
 
-        <!-- 2. Central Visual -->
-        <div class="ai-visual-container fade-in delay-2">
-            <!-- (SVG content remains the same) -->
-            <svg class="ai-image" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <radialGradient id="gradCore" cx="50%" cy="50%" r="50%">
-                        <stop offset="0%" style="stop-color:#00f3ff;stop-opacity:0.9" />
-                        <stop offset="100%" style="stop-color:#000000;stop-opacity:0" />
-                    </radialGradient>
-                    <filter id="glow">
-                        <feGaussianBlur stdDeviation="3" result="coloredBlur" />
-                        <feMerge>
-                            <feMergeNode in="coloredBlur" />
-                            <feMergeNode in="SourceGraphic" />
-                        </feMerge>
-                    </filter>
-                </defs>
+            <h1 class="headline fade-in delay-1">
+                Automatiza tu empresa.<br>
+                <span class="gradient-text">Recupera tu tiempo.</span>
+            </h1>
 
-                <!-- Rotating Rings -->
-                <circle cx="200" cy="200" r="100" stroke="#00f3ff" stroke-width="3" fill="none" opacity="0.85">
-                    <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200"
-                        dur="20s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="200" cy="200" r="130" stroke="#bd00ff" stroke-dasharray="20,10" stroke-width="3" fill="none"
-                    opacity="0.75">
-                    <animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200"
-                        dur="25s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="200" cy="200" r="160" stroke="#00f3ff" stroke-dasharray="2,10" stroke-width="2" fill="none"
-                    opacity="0.65">
-                    <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200"
-                        dur="30s" repeatCount="indefinite" />
-                </circle>
+            <p class="hero-sub fade-in delay-2">
+                Conectamos tus herramientas, eliminamos el trabajo manual repetitivo
+                y ponemos la IA a trabajar para que tu negocio escale sin límites.
+            </p>
 
-                <!-- Central Core -->
-                <circle cx="200" cy="200" r="60" fill="url(#gradCore)" filter="url(#glow)">
-                    <animate attributeName="r" values="55;65;55" dur="4s" repeatCount="indefinite" />
-                </circle>
+            <div class="hero-ctas fade-in delay-2">
+                <a href="https://wa.me/34689025315?text=Hola%2C%20me%20interesa%20la%20auditoría%20de%20IA%20gratuita"
+                    class="btn-hero-primary" target="_blank" rel="noopener">
+                    💬 Quiero mi Auditoría Gratuita
+                </a>
+                <a href="#servicios" class="btn-hero-secondary">
+                    Ver servicios ↓
+                </a>
+            </div>
 
-                <!-- Inner Geometry -->
-                <path d="M200 140 L252 230 L148 230 Z" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.95">
-                    <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200"
-                        dur="15s" repeatCount="indefinite" />
-                </path>
-                <path d="M200 260 L252 170 L148 170 Z" stroke="#bd00ff" stroke-width="3" fill="none" opacity="0.95">
-                    <animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200"
-                        dur="15s" repeatCount="indefinite" />
-                </path>
-            </svg>
+            <div class="tech-row fade-in delay-3">
+                <span class="tech-label">Tecnología</span>
+                <span class="tech-badge">n8n</span>
+                <span class="tech-badge">Make</span>
+                <span class="tech-badge">OpenAI</span>
+                <span class="tech-badge">WhatsApp API</span>
+                <span class="tech-badge">Supabase</span>
+            </div>
+
         </div>
 
-        <!-- 3. Text -->
-        <h1 class="headline fade-in delay-1">
-            Libera el 40% de tu tiempo con <br>
-            <span class="gradient-text">Automatización e IA</span>.
-        </h1>
-
-        <!-- Subheadline moved up -->
-
-        <!-- 4. Button -->
-        <a href="mailto:info@kuatrinova.es?subject=Quiero%20mi%20auditoría%20gratuita"
-            class="cta-button fade-in delay-3">
-            <span class="cta-icon">🚀</span> Quiero mi Auditoría de IA Gratuita
+        <!-- Flecha scroll -->
+        <a href="#servicios" class="scroll-indicator fade-in delay-3">
+            <span>Descubre más</span>
+            <div class="scroll-arrow"></div>
         </a>
-    </main>
+    </div>
 
+    <!-- ═══════════════ STATS ═══════════════ -->
+    <div class="stats-bar">
+        <div class="stats-grid reveal">
+            <div class="stat">
+                <div class="stat-number">40%</div>
+                <div class="stat-label">Menos tiempo</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Disponibilidad</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Código necesario</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">+100</div>
+                <div class="stat-label">Integraciones</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════ SERVICIOS ═══════════════ -->
+    <div class="section-wrapper dark" id="servicios">
+        <section>
+            <p class="section-label reveal">Lo que hacemos</p>
+            <h2 class="section-title reveal">Nuestros <span class="gradient-text">Servicios</span></h2>
+            <p class="section-subtitle reveal">Automatizamos los procesos que más tiempo te roban para que puedas enfocarte en lo que realmente importa.</p>
+
+            <div class="services-grid reveal">
+                <a href="automatizacion.html" class="service-card">
+                    <span class="service-icon">⚙️</span>
+                    <h3 class="service-title">Automatización de Procesos</h3>
+                    <p class="service-desc">Conectamos tus herramientas y eliminamos el trabajo manual repetitivo con flujos automatizados en n8n y Make. Sin código, sin fricciones.</p>
+                    <span class="card-link">Ver más →</span>
+                </a>
+                <a href="chatbots.html" class="service-card">
+                    <span class="service-icon">🤖</span>
+                    <h3 class="service-title">Chatbots con IA</h3>
+                    <p class="service-desc">Asistentes inteligentes que atienden a tus clientes 24/7, responden preguntas, cualifican leads y gestionan reservas de forma autónoma.</p>
+                    <span class="card-link">Ver más →</span>
+                </a>
+                <a href="integraciones.html" class="service-card">
+                    <span class="service-icon">🔗</span>
+                    <h3 class="service-title">Integraciones de Sistemas</h3>
+                    <p class="service-desc">Conectamos tu CRM, email, ERP y cualquier herramienta para que toda la información fluya sola, sin copiar y pegar entre apps.</p>
+                    <span class="card-link">Ver más →</span>
+                </a>
+                <a href="dashboards.html" class="service-card">
+                    <span class="service-icon">📊</span>
+                    <h3 class="service-title">Dashboards e Informes</h3>
+                    <p class="service-desc">Paneles de control automatizados que te dan visibilidad total de tu negocio en tiempo real, sin esperar al equipo de IT.</p>
+                    <span class="card-link">Ver más →</span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════ CÓMO FUNCIONA ═══════════════ -->
+    <div class="section-wrapper darker">
+        <section>
+            <p class="section-label reveal">El proceso</p>
+            <h2 class="section-title reveal">Cómo <span class="gradient-text">Trabajamos</span></h2>
+            <p class="section-subtitle reveal">Un proceso claro, sin tecnicismos y orientado a resultados desde el primer día.</p>
+
+            <div class="steps-grid reveal">
+                <a href="auditoria.html" class="step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Auditoría Gratuita</h3>
+                    <p class="step-desc">Analizamos tu negocio, identificamos los procesos que más tiempo consumen y calculamos el impacto real de automatizarlos.</p>
+                    <span class="card-link">Ver más →</span>
+                </a>
+                <a href="diseno.html" class="step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Diseño a Medida</h3>
+                    <p class="step-desc">Diseñamos la solución exacta para tu caso, sin plantillas genéricas. Te mostramos el flujo completo antes de tocar nada.</p>
+                    <span class="card-link">Ver más →</span>
+                </a>
+                <a href="implementacion.html" class="step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Implementación y Soporte</h3>
+                    <p class="step-desc">Ponemos en marcha la automatización, formamos a tu equipo y te acompañamos para que todo funcione sin preocupaciones.</p>
+                    <span class="card-link">Ver más →</span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════ POR QUÉ KUATRINOVA ═══════════════ -->
+    <div class="section-wrapper dark">
+        <section>
+            <p class="section-label reveal">Por qué elegirnos</p>
+            <h2 class="section-title reveal">Resultados <span class="gradient-text">Reales</span></h2>
+            <p class="section-subtitle reveal">No vendemos tecnología, vendemos tiempo y tranquilidad para que tu empresa crezca.</p>
+
+            <div class="benefits-grid reveal">
+                <div class="benefit">
+                    <div class="benefit-icon-wrap">⏱️</div>
+                    <div>
+                        <h3 class="benefit-title">Ahorra hasta un 40% de tiempo</h3>
+                        <p class="benefit-desc">Tus equipos dejan de hacer tareas manuales y se centran en lo que genera valor real.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon-wrap">💸</div>
+                    <div>
+                        <h3 class="benefit-title">Reduce costes operativos</h3>
+                        <p class="benefit-desc">Menos errores humanos y procesos que funcionan solos las 24 horas del día.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon-wrap">📈</div>
+                    <div>
+                        <h3 class="benefit-title">Escala sin contratar</h3>
+                        <p class="benefit-desc">Tus procesos crecen con tu negocio sin necesidad de añadir personal extra.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon-wrap">🎯</div>
+                    <div>
+                        <h3 class="benefit-title">Soluciones 100% a medida</h3>
+                        <p class="benefit-desc">Cada solución se diseña para tu negocio, tus herramientas y tu equipo concreto.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon-wrap">🔒</div>
+                    <div>
+                        <h3 class="benefit-title">Sin dependencia técnica</h3>
+                        <p class="benefit-desc">Te formamos y documentamos todo. Tu equipo puede gestionar lo que hemos construido.</p>
+                    </div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon-wrap">⚡</div>
+                    <div>
+                        <h3 class="benefit-title">Resultados rápidos</h3>
+                        <p class="benefit-desc">Las primeras automatizaciones entran en producción en días. Ves el impacto desde el principio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- ═══════════════ CTA FINAL ═══════════════ -->
+    <div class="cta-section">
+        <p class="section-label">Empieza hoy</p>
+        <h2 class="section-title">¿Listo para <span class="gradient-text">Automatizar</span>?</h2>
+        <p class="section-subtitle" style="margin: 0 auto 3rem;">
+            Reserva una llamada gratuita de 30 minutos. Te decimos exactamente qué podemos automatizar y cuánto tiempo te va a liberar.
+        </p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/34689025315?text=Hola%2C%20me%20interesa%20la%20auditoría%20de%20IA%20gratuita"
+                class="btn-primary" target="_blank" rel="noopener">
+                💬 Escribir por WhatsApp
+            </a>
+            <a href="mailto:info@kuatrinova.es?subject=Quiero%20mi%20auditoría%20gratuita" class="btn-secondary">
+                ✉️ info@kuatrinova.es
+            </a>
+        </div>
+    </div>
+
+    <!-- ═══════════════ WHATSAPP FLOAT ═══════════════ -->
+    <a href="https://wa.me/34689025315?text=Hola%2C%20me%20interesa%20la%20auditoría%20de%20IA%20gratuita"
+        class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">💬</a>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
     <footer>
-        <p>&copy; 2026 Kuatrinova Studio IA. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Kuatrinova Studio IA &nbsp;·&nbsp; Todos los derechos reservados &nbsp;·&nbsp; info@kuatrinova.es</p>
     </footer>
 
-    <!-- Particles.js CDN -->
+    <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Particles
             if (typeof particlesJS !== 'undefined') {
                 particlesJS("particles-js", {
                     "particles": {
-                        "number": { "value": 80 }, /* Reduced from 150 to reduce saturation */
+                        "number": { "value": 80 },
                         "color": { "value": ["#00f3ff", "#bd00ff", "#ffffff"] },
                         "shape": { "type": "circle" },
-                        "opacity": { "value": 0.6, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 } }, /* Reduced opacity */
+                        "opacity": { "value": 0.6, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1 } },
                         "size": { "value": 3, "random": true, "anim": { "enable": false } },
-                        "line_linked": { "enable": true, "distance": 150, "color": "#bd00ff", "opacity": 0.4, "width": 1 }, /* Reduced line opacity */
+                        "line_linked": { "enable": true, "distance": 150, "color": "#bd00ff", "opacity": 0.4, "width": 1 },
                         "move": { "enable": true, "speed": 2, "direction": "none", "random": true, "out_mode": "out" }
                     },
                     "interactivity": {
@@ -372,9 +949,28 @@
                     }
                 });
             }
+
+            // Smooth scroll
+            document.querySelectorAll('a[href="#servicios"]').forEach(function(el) {
+                el.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector('#servicios').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Scroll reveal
+            var reveals = document.querySelectorAll('.reveal');
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            reveals.forEach(function(el) { observer.observe(el); });
         });
     </script>
 </body>
 
 </html>
-<!-- Force update 2026-02-20 -->

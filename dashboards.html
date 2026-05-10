@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TMTDNCJ3');</script>
+    <!-- End Google Tag Manager -->
+    <title>Dashboards e Informes | Kuatrinova Studio IA</title>
+    <meta name="description" content="Paneles de control automatizados con los KPIs que necesita tu equipo. Dashboards en tiempo real sin preparar informes manuales.">
+    <link rel="canonical" href="https://kuatrinova.es/dashboards.html">
+    <meta property="og:title" content="Dashboards e Informes | Kuatrinova">
+    <meta property="og:description" content="Toma decisiones con datos reales, no con intuicion ni Excel del lunes.">
+    <meta property="og:image" content="https://kuatrinova.es/assets/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg:#000;--text:#fff;--blue:#00f3ff;--purple:#bd00ff;--heading:'Montserrat',sans-serif;--body:'Inter',sans-serif;}
+        *{margin:0;padding:0;box-sizing:border-box;}body{background:var(--bg);color:var(--text);font-family:var(--body);}
+        .nav{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 2rem;border-bottom:1px solid rgba(255,255,255,.06);}.nav-logo{height:80px;image-rendering:-webkit-optimize-contrast;}.nav-back{font-size:.8rem;color:#888;text-decoration:none;letter-spacing:2px;text-transform:uppercase;transition:color .3s;}.nav-back:hover{color:var(--blue);}
+        .service-hero{text-align:center;padding:6rem 2rem 5rem;background:radial-gradient(ellipse at center,#060620 0%,#000 70%);position:relative;}.service-hero::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60%;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);opacity:.3;}
+        .hero-icon{font-size:4rem;margin-bottom:1.5rem;filter:drop-shadow(0 0 20px rgba(0,243,255,.5));}.hero-title{font-family:var(--heading);font-size:clamp(2rem,5vw,3.2rem);font-weight:900;text-transform:uppercase;letter-spacing:-1px;line-height:1.1;margin-bottom:1rem;}.hero-sub{color:#aaa;font-size:1.1rem;line-height:1.7;max-width:620px;margin:0 auto;}
+        .gradient{background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+        .sect{max-width:1100px;margin:0 auto;padding:80px 2rem;}.sect-label{display:inline-block;font-size:.7rem;letter-spacing:5px;text-transform:uppercase;color:var(--blue);background:rgba(0,243,255,.08);border:1px solid rgba(0,243,255,.2);border-radius:50px;padding:4px 16px;margin-bottom:1.5rem;}.sect-title{font-family:var(--heading);font-size:2rem;font-weight:900;text-transform:uppercase;letter-spacing:-1px;margin-bottom:1rem;}.sect-sub{color:#aaa;font-size:1rem;line-height:1.7;max-width:560px;margin-bottom:2.5rem;}
+        .wrap-dark{background:linear-gradient(180deg,#06060f,#080818,#06060f);position:relative;}.wrap-darker{background:linear-gradient(180deg,#020208,#060614,#020208);position:relative;}.wrap-dark::before,.wrap-darker::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,243,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,243,255,.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+        .cases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;}
+        .case-card{background:linear-gradient(160deg,rgba(0,243,255,.04),rgba(0,0,0,.3));border:1px solid rgba(0,243,255,.12);border-radius:20px;padding:2rem;transition:all .35s;position:relative;overflow:hidden;}.case-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--purple),var(--blue));background-size:200% 100%;opacity:0;transition:opacity .35s;animation:shimmer 3s linear infinite;}@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}.case-card:hover{border-color:rgba(0,243,255,.4);transform:translateY(-6px);box-shadow:0 25px 60px rgba(0,243,255,.1);}.case-card:hover::before{opacity:1;}
+        .case-icon{font-size:2rem;margin-bottom:1rem;}.case-title{font-family:var(--heading);font-size:.9rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:.5rem;color:#fff;}.case-desc{color:#999;font-size:.85rem;line-height:1.65;}
+        .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:2.5rem;}.stat{text-align:center;padding:1.5rem;background:rgba(255,255,255,.02);border:1px solid rgba(0,243,255,.1);border-radius:16px;}.stat-num{font-family:var(--heading);font-size:2.5rem;font-weight:900;background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:.5rem;}.stat-txt{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:#666;}
+        .tools-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}.tool{padding:6px 18px;border:1px solid rgba(255,255,255,.1);border-radius:50px;font-size:.75rem;font-weight:600;letter-spacing:1px;color:#777;background:rgba(255,255,255,.02);transition:all .3s;}.tool:hover{border-color:rgba(0,243,255,.3);color:var(--blue);}
+        .target-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1.5rem;}.target-list li{padding:1rem 1.25rem;background:rgba(255,255,255,.02);border:1px solid rgba(0,243,255,.12);border-radius:14px;font-size:.9rem;color:#bbb;display:flex;align-items:center;gap:.75rem;}.target-list li span{color:var(--blue);font-size:1.2rem;}
+        .cta-sect{text-align:center;padding:100px 2rem;background:radial-gradient(ellipse at center,#080820,#000 70%);}.cta-sect .sect-title{font-size:2.5rem;margin-bottom:1rem;}.cta-sect .sect-sub{margin:0 auto 2.5rem;max-width:500px;}
+        .btn-cta{display:inline-flex;align-items:center;gap:10px;padding:18px 44px;font-family:var(--heading);font-size:.95rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:#000;background:var(--blue);border-radius:50px;transition:all .3s;box-shadow:0 0 50px rgba(0,243,255,.4);}.btn-cta:hover{background:#fff;box-shadow:0 0 70px rgba(0,243,255,.6);transform:translateY(-3px);}
+        footer{background:#000;border-top:1px solid rgba(255,255,255,.05);text-align:center;padding:2rem;font-size:.7rem;color:#333;letter-spacing:2px;text-transform:uppercase;}
+        .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:999;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;font-size:1.8rem;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:all .3s;animation:waf 3s infinite ease-in-out;}.wa-float:hover{transform:scale(1.1);}@keyframes waf{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+        .reveal{opacity:0;transform:translateY(40px);transition:opacity .7s,transform .7s;}.reveal.visible{opacity:1;transform:translateY(0);}
+        @media(max-width:768px){.nav{padding:1rem 1.25rem;}.service-hero{padding:4rem 1.5rem 3rem;}.sect{padding:60px 1.5rem;}.stat-num{font-size:2rem;}.btn-cta{width:100%;justify-content:center;max-width:320px;}}
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMTDNCJ3"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav class="nav">
+        <a href="index.html"><img src="assets/LOGO_KUATRINOVA_SENCILLO.png" alt="Kuatrinova" class="nav-logo"></a>
+        <a href="index.html" class="nav-back">← Volver</a>
+    </nav>
+
+    <div class="service-hero">
+        <div class="hero-icon">📊</div>
+        <h1 class="hero-title">Dashboards e <span class="gradient">Informes</span></h1>
+        <p class="hero-sub">Toma decisiones con datos reales, no con intuicion ni con el Excel del lunes. Paneles actualizados automaticamente con los KPIs que necesita tu equipo.</p>
+    </div>
+
+    <div class="wrap-dark">
+        <div class="sect">
+            <p class="sect-label reveal">Casos reales</p>
+            <h2 class="sect-title reveal">Lo que <span class="gradient">construimos</span></h2>
+            <p class="sect-sub reveal">Paneles que se actualizan solos y llegan a quien los necesita, cuando los necesita.</p>
+            <div class="cases-grid reveal">
+                <div class="case-card">
+                    <div class="case-icon">💼</div>
+                    <p class="case-title">Dashboard de ventas</p>
+                    <p class="case-desc">Pipeline actualizado, objetivo mensual, conversion por comercial. Todo visible en tiempo real sin necesidad de abrir el CRM.</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">📩</div>
+                    <p class="case-title">Informe semanal automatico</p>
+                    <p class="case-desc">Cada lunes a las 8h llega por email el resumen de ventas, incidencias y rendimiento del equipo. Sin que nadie lo prepare.</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">🏭</div>
+                    <p class="case-title">Panel de operaciones</p>
+                    <p class="case-desc">Estado de pedidos, tiempos de entrega y stock critico visible en pantalla en almacen o tienda. Datos siempre frescos.</p>
+                </div>
+                <div class="case-card">
+                    <div class="case-icon">📈</div>
+                    <p class="case-title">Seguimiento de campanas</p>
+                    <p class="case-desc">Metricas de Google Ads, Meta y email consolidadas en un solo lugar, actualizadas cada 24h. Un vistazo y sabes como vas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-darker">
+        <div class="sect">
+            <p class="sect-label reveal">Datos reales</p>
+            <h2 class="sect-title reveal">El impacto de los <span class="gradient">datos</span></h2>
+            <p class="sect-sub reveal">Datos de Forrester y Microsoft sobre el impacto de los dashboards automatizados.</p>
+            <div class="stats-row reveal">
+                <div class="stat"><div class="stat-num">125h</div><div class="stat-txt">Ahorro anual por equipo</div></div>
+                <div class="stat"><div class="stat-num">42%</div><div class="stat-txt">Menos trabajo analitico</div></div>
+                <div class="stat"><div class="stat-num">0</div><div class="stat-txt">Errores de informes manuales</div></div>
+                <div class="stat"><div class="stat-num">24/7</div><div class="stat-txt">Visibilidad continua</div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-dark">
+        <div class="sect">
+            <p class="sect-label reveal">Stack tecnologico</p>
+            <h2 class="sect-title reveal">Herramientas que <span class="gradient">usamos</span></h2>
+            <div class="tools-row reveal">
+                <span class="tool">Google Looker Studio</span><span class="tool">Metabase</span><span class="tool">Power BI</span><span class="tool">n8n</span><span class="tool">Supabase</span><span class="tool">Google Sheets</span><span class="tool">BigQuery</span><span class="tool">HubSpot</span><span class="tool">Meta Ads API</span><span class="tool">Google Analytics 4</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap-darker">
+        <div class="sect">
+            <p class="sect-label reveal">Para quien es</p>
+            <h2 class="sect-title reveal">Esto es para ti <span class="gradient">si...</span></h2>
+            <ul class="target-list reveal">
+                <li><span>→</span> Tomas decisiones con datos desactualizados o en Excel</li>
+                <li><span>→</span> Pierdes horas cada semana consolidando informacion de distintas fuentes</li>
+                <li><span>→</span> Tu equipo pide datos y tarda dias en tener respuesta</li>
+                <li><span>→</span> Eres gerente, director comercial o responsable de operaciones</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cta-sect">
+        <h2 class="sect-title">¿Quieres ver tus <span class="gradient">datos</span>?</h2>
+        <p class="sect-sub">Te montamos un dashboard piloto con tus datos reales para que veas el impacto antes de comprometerte.</p>
+        <a href="https://wa.me/34689025315?text=Hola%2C%20me%20interesa%20un%20dashboard%20automatizado%20para%20mi%20empresa" class="btn-cta" target="_blank" rel="noopener">💬 Pedir dashboard piloto</a>
+    </div>
+
+    <footer><p>&copy; 2026 Kuatrinova Studio IA &middot; info@kuatrinova.es</p></footer>
+    <a href="https://wa.me/34689025315?text=Hola%2C%20me%20interesa%20la%20auditoría%20de%20IA%20gratuita" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+    <script>document.addEventListener('DOMContentLoaded',function(){var o=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('visible');});},{threshold:.15});document.querySelectorAll('.reveal').forEach(function(el){o.observe(el);});});</script>
+</body>
+</html>
