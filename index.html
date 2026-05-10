@@ -31,20 +31,44 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Kuatrinova Studio IA",
-      "url": "https://kuatrinova.es",
-      "email": "info@kuatrinova.es",
-      "telephone": "+34689025315",
-      "description": "Automatización de procesos e Inteligencia Artificial a medida para empresas. Eliminamos tareas repetitivas con n8n, Make y chatbots IA.",
-      "areaServed": "ES",
-      "knowsAbout": ["Automatización de procesos", "Inteligencia Artificial", "n8n", "Make", "Chatbots IA", "Integraciones de sistemas"],
-      "offers": {
-        "@type": "Offer",
-        "name": "Auditoría de IA Gratuita",
-        "price": "0",
-        "priceCurrency": "EUR"
-      }
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://kuatrinova.es/#organization",
+          "name": "Kuatrinova Studio IA",
+          "url": "https://kuatrinova.es",
+          "logo": "https://kuatrinova.es/assets/LOGO_KUATRINOVA_HQ.png",
+          "image": "https://kuatrinova.es/assets/LOGO_KUATRINOVA_HQ.png",
+          "email": "info@kuatrinova.es",
+          "telephone": "+34689025315",
+          "description": "Automatización de procesos e Inteligencia Artificial a medida para empresas. Eliminamos tareas repetitivas con n8n, Make y chatbots IA.",
+          "areaServed": "ES",
+          "knowsAbout": ["Automatización de procesos", "Inteligencia Artificial", "n8n", "Make", "Chatbots IA", "Integraciones de sistemas", "Dashboards", "Auditoría de IA"],
+          "offers": {
+            "@type": "Offer",
+            "name": "Auditoría de IA Gratuita",
+            "price": "0",
+            "priceCurrency": "EUR"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+34689025315",
+            "contactType": "customer service",
+            "email": "info@kuatrinova.es",
+            "availableLanguage": ["Spanish"],
+            "areaServed": "ES"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://kuatrinova.es/#website",
+          "url": "https://kuatrinova.es",
+          "name": "Kuatrinova",
+          "description": "Automatización e IA para empresas",
+          "publisher": {"@id": "https://kuatrinova.es/#organization"},
+          "inLanguage": "es-ES"
+        }
+      ]
     }
     </script>
 
