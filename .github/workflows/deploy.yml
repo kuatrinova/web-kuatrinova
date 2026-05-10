@@ -1,0 +1,40 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: SSH + git reset --hard origin/main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p ${{ secrets.DEPLOY_PORT }} -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Deploy via git reset --hard
+        run: |
+          ssh -i ~/.ssh/deploy_key \
+              -p ${{ secrets.DEPLOY_PORT }} \
+              -o IdentitiesOnly=yes \
+              -o PasswordAuthentication=no \
+              ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} \
+              "cd ~/${{ secrets.DEPLOY_PATH }} && export GIT_PAGER=cat && git fetch origin main && git reset --hard origin/main && git --no-pager log --oneline -1"
+
+      - name: Verify production
+        run: |
+          sleep 2
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://kuatrinova.es/?cb=$(uuidgen)")
+          echo "Production HTTP status: $STATUS"
+          test "$STATUS" = "200"
