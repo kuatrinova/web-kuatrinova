@@ -25,3 +25,4 @@ Entradas más recientes arriba.
 - **Cross-linking temático (commit 8491aaf):** sección "Servicios relacionados" antes del CTA en cada interna con anchor text descriptivo
 - **WebP + dimensions explícitas (commit a27486c):** logos y og-image convertidos a WebP (-37/-41/-78%), `<picture>` con fallback PNG/JPG, `width`/`height` en cada `<img>` para evitar CLS
 - **particles.js self-hosted con defer (commit b2ccee6):** eliminada dependencia de cdn.jsdelivr.net, descargado a `/assets/`, no bloquea LCP
+- **Auto-deploy GitHub Actions (commit 8f84729):** workflow `.github/workflows/deploy.yml` se ejecuta en cada push a main. Conecta por SSH con clave dedicada y hace `git reset --hard origin/main`. ~10-15s de cambio a producción. Documentado en CLAUDE.md.

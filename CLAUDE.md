@@ -24,28 +24,36 @@
 
 ## Flujo de deploy — kuatrinova.es
 
-⚠️ **NO usar el "Implementar" del panel Git de Hostinger**. Crea un subdirectorio `public_html/public_html/` y rompe el deploy.
+✅ **Auto-deploy configurado** vía GitHub Actions. Cada `git push origin main` dispara `.github/workflows/deploy.yml` que conecta por SSH al hosting con clave dedicada y hace `git reset --hard origin/main`. ~10-15 segundos.
 
 **Flujo correcto:**
 ```bash
-# 1. Local: hacer cambios y push a GitHub
+# Solo local: hacer cambios y push
 git add -A && git commit -m "..." && git push origin main
-
-# 2. Conectar SSH a Hostinger Web Hosting:
-ssh -p 65002 u846574029@77.37.52.87
-# (la contraseña la cambia Carlos cada cierto tiempo, preguntar antes)
-
-# 3. Deploy via git reset (forzar sincronización con remoto):
-cd ~/domains/kuatrinova.es/public_html
-export GIT_PAGER=cat
-git fetch origin main
-git reset --hard origin/main
-
-# 4. Verificar:
-grep -c "GTM-TMTDNCJ3" index.html  # debería ser 2
+# ya está — GitHub Actions despliega solo
 ```
 
-**Archivos NO trackeados en git que el hosting tiene en el raíz** (no tocar): `firmas/`, `instagram/`, `default.php`, `relay.php`, `assets/851.jpg`, `assets/Logotipo_*.png`, `assets/bg-ai.png`. `git reset --hard` no los borra (están en `.gitignore` o son untracked).
+Ver estado del deploy:
+```bash
+gh run list --workflow=deploy.yml --limit 3
+gh run view <RUN_ID> --log
+```
+
+⚠️ **NO usar el "Implementar" del panel Git de Hostinger**. Crea un subdirectorio `public_html/public_html/` y rompe el deploy. El auto-deploy de GitHub Actions usa SSH + `git reset --hard`, NO el panel Git de Hostinger.
+
+**Si necesitas un deploy manual de emergencia** (workflow caído, GitHub Actions deshabilitado):
+```bash
+ssh -p 65002 u846574029@77.37.52.87
+cd ~/domains/kuatrinova.es/public_html
+export GIT_PAGER=cat
+git fetch origin main && git reset --hard origin/main
+```
+
+**Archivos NO trackeados en git que el hosting tiene en el raíz** (no tocar): `firmas/`, `instagram/`, `default.php`, `relay.php`, `assets/851.jpg`, `assets/Logotipo_*.png`, `assets/bg-ai.png`. `git reset --hard` no los borra (son untracked en este repo).
+
+**Secrets de GitHub** (configurados en repo `kuatrinova/web-kuatrinova`):
+- `DEPLOY_SSH_KEY` — clave privada ED25519 dedicada (la pública vive en `~/.ssh/authorized_keys` del hosting)
+- `DEPLOY_HOST`, `DEPLOY_PORT`, `DEPLOY_USER`, `DEPLOY_PATH`
 
 ## Reglas de trabajo — OBLIGATORIAS
 
