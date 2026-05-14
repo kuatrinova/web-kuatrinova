@@ -3,6 +3,13 @@
 El agente actualiza este archivo al finalizar cada sesión de trabajo.
 Entradas más recientes arriba.
 
+## 2026-05-14
+- **Auditoría web completa** (puntuación 84/100 🟢)
+- **Meta description del index** acortada de 224→145 chars (Google ya no la trunca, mantiene el CTA "Auditoría gratuita de 30 minutos")
+- **`hasOfferCatalog` añadido** al ProfessionalService del index con los 4 servicios — sin duplicar los `Service` ya presentes en las páginas internas
+- **CSP completa en `.htaccess`** con allowlist específica para GTM, GA4 y Google Fonts (antes solo había `upgrade-insecure-requests`). `script-src` y `style-src` mantienen `'unsafe-inline'` por necesidad de GTM en sitio estático
+- Deploy: commit `02ce8b3` → push → GH Actions en 8s → purga manual de caché CDN desde hPanel
+
 ## 2026-05-10
 - Creada estructura de documentación del proyecto (CLAUDE.md, ARCHITECTURE.md, CONVENTIONS.md, DECISIONS.md, CHANGELOG.md, memory/progress.md, memory/context.md)
 - Audit SEO inicial — hallazgos pendientes en su momento

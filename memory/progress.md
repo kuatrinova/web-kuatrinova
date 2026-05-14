@@ -1,10 +1,16 @@
 # Estado actual del proyecto
 
-**Última actualización:** 2026-05-10
+**Última actualización:** 2026-05-14
 **Actualizado por:** agente
 
 ## Estado general
-🟢 En producción con tracking GA4/GTM funcionando
+🟢 En producción con tracking GA4/GTM funcionando + CSP endurecida
+
+## SEO técnico y seguridad — sesión 14/05/2026
+- Meta description del index acortada de 224→145 chars (no se trunca en SERP, mantiene CTA "Auditoría gratuita de 30 minutos")
+- `hasOfferCatalog` añadido al `ProfessionalService` del index con los 4 servicios (Automatización, Chatbots, Integraciones, Dashboards) — sin duplicar los Service ya presentes en las páginas internas
+- **CSP nueva** en `.htaccess`: `default-src 'self'` con allowlist específica para GTM (`googletagmanager.com`), GA4 (`*.analytics.google.com`, `google-analytics.com`) y Google Fonts (`fonts.googleapis.com`, `fonts.gstatic.com`). `script-src` y `style-src` con `'unsafe-inline'` por necesidad de GTM en sitio estático
+- Auditoría completa de la web (resultado 84/100 🟢): mejor que kuatricomia.es (63/100)
 
 ## Tracking + SEO técnico (live desde 10/05/2026)
 - GA4 Property `536940191` ("Kuatrinova" en cuenta 388745006), Measurement ID `G-PXKCC10MD7`
@@ -31,6 +37,15 @@
 - Ninguno
 
 ## Notas última sesión
+**2026-05-14** — Auditoría web + endurecimiento de SEO/seguridad:
+1. Auditoría completa de kuatrinova.es: puntuación 84/100 🟢 (SEO 80, Rendimiento 88, Accesibilidad 85, Seguridad 88, UX 80)
+2. Acortada meta description del index para que no la trunque Google (224→145 chars)
+3. Añadido `hasOfferCatalog` al ProfessionalService del index con los 4 servicios
+4. CSP completa añadida al `.htaccess` con allowlist para GTM, GA4 y Google Fonts (antes solo había `upgrade-insecure-requests`)
+5. Commit `02ce8b3` → push a main → deploy automático vía GH Actions en 8s
+6. Purga manual de caché CDN desde hPanel tras deploy (TTL anterior 24h)
+7. Verificación curl: los 3 cambios servidos correctamente desde edge
+
 **2026-05-10** — Sesión larga (~3h):
 1. Reestructuración de documentación del proyecto (CLAUDE.md actualizado + ARCHITECTURE/CONVENTIONS/DECISIONS/CHANGELOG/memory creados)
 2. Audit SEO inicial (hallazgos en TODOs)
